@@ -8,8 +8,9 @@ export default async function Prodects(
   console.log(productId)
 
   const data = await fetch(`https://fakestoreapi.com/products/${productId}`)
-  const res = await data.json()
-  console.log(res)
+  const res = await data.json() // getting data
+  console.log(res) 
+  // hello
   return (
     <>
       <section className="text-gray-600 body-font overflow-hidden">
@@ -171,7 +172,7 @@ export default async function Prodects(
                 </span>
                 <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                   Add to cart
-                  
+
                 </button>
                 <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                   <svg
