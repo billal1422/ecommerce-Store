@@ -1,3 +1,4 @@
+
 export default {
     name: 'product',
     type: 'document',
@@ -8,7 +9,7 @@ export default {
         type: 'string',
         title: 'Product Name',
       },
-      {
+     {
         name: 'description',
         type: 'string',
         title: 'Description'
