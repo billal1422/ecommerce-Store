@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        <div className="font-bold text-xl tracking-wide">Iconinc Store</div>
+        <div className="font-bold text-xl tracking-wide">Style Hub</div>
       </div>
       <ul
         className={`${isMenuOpen

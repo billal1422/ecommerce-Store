@@ -4,7 +4,11 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import ReduxProvider from "./components/reduxprovider";
+import {
+  ClerkProvider,
 
+} from '@clerk/nextjs'
+import './globals.css'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,16 +29,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+  return ( <ClerkProvider>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-bold text-center  text-2xl bg-blend-darken text-black `}
+>
         <ReduxProvider>
-      <Navbar/>
+      
+      <Navbar/> 
+
         {children}
         <Footer/>
         </ReduxProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
